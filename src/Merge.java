@@ -39,5 +39,4 @@ public class Merge {
             a[k++] = r[j++];
         }
     }
-
 }

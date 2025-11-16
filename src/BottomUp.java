@@ -36,7 +36,5 @@ public class BottomUp {
             i = i * 2
 
         }
-
     }
-
 }
