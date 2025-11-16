@@ -1,10 +1,10 @@
-S <- Sequence
+A <- Array
 n <- elements
 i <- index
 j <- index
 
 BEGIN
-    IF n < 2:
+    IF n < 2
         return
     i <- 1
     WHILE i < n
@@ -16,10 +16,10 @@ BEGIN
             IF mid >= n
                 break
 
-            IF right > n:
+            IF right > n
                 right <- n
 
-            merge(S + j, S + mid, S + right)
+            merge(A + j, A + mid, A + right)
 
             j ← j + 2*i
         i ← i * 2
