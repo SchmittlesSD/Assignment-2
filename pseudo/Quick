@@ -1,25 +1,28 @@
-START
+A <- Array
+n <- number of elements
+start <- starting index
+end <- ending index
+i <- index
+j <- index
+pivot <- value
+pIndex <- partition index
 
-Quicksort(array, start, end)
-{
-    if start < end
-        pIndex = Partition(array, start, end)
-        Quicksort(array, start, pIndex - 1)
-        Quicksort(array, pIndex + 1, end)
-}
+BEGIN
+    Quicksort(A, start, end)
+        IF start < end
+            pIndex <- Partition(A, start, end)
+            Quicksort(A, start, pIndex - 1)
+            Quicksort(A, pIndex + 1, end)
 
-Partition(array, start, end)
-{
-    pivot = array[end]
-    i = start - 1
+    Partition(A, start, end)
+        pivot <- A[end]
+        i <- start - 1
 
-    for j = start to end - 1
-        if array[j] < pivot
-            i = i + 1
-            swap(array[i], array[j])
+        FOR j ← start to end - 1
+            IF A[j] < pivot
+                i ← i + 1
+                swap(A[i], A[j])
 
-    swap(array[i + 1], array[end])
-    return i + 1
-}
-
+        swap(A[i + 1], A[end])
+        RETURN i + 1
 END
