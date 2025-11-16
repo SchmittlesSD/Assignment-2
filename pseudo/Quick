@@ -1,0 +1,25 @@
+START
+
+Quicksort(array, start, end)
+{
+    if start < end
+        pIndex = Partition(array, start, end)
+        Quicksort(array, start, pIndex - 1)
+        Quicksort(array, pIndex + 1, end)
+}
+
+Partition(array, start, end)
+{
+    pivot = array[end]
+    i = start - 1
+
+    for j = start to end - 1
+        if array[j] < pivot
+            i = i + 1
+            swap(array[i], array[j])
+
+    swap(array[i + 1], array[end])
+    return i + 1
+}
+
+END
