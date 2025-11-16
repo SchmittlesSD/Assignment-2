@@ -5,7 +5,7 @@ import java.util.Random;
 public class MainSorter {
 
     public static void main(String[] args) {
-        for (int count = 0; count < 3; count++) {
+        for (int count = 0; count < 20000; count++) {
             Random random = new Random();
             int size = random.nextInt(50000);
 

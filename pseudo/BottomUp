@@ -1,0 +1,26 @@
+S <- Sequence
+n <- elements
+i <- index
+j <- index
+
+BEGIN
+    IF n < 2:
+        return
+    i <- 1
+    WHILE i < n
+        j <- 0
+        WHILE j < n
+            mid <- j + i
+            right <- j + 2*i
+
+            IF mid >= n
+                break
+
+            IF right > n:
+                right <- n
+
+            merge(S + j, S + mid, S + right)
+
+            j ← j + 2*i
+        i ← i * 2
+END

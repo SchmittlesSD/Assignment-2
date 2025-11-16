@@ -1,5 +1,9 @@
 public class BottomUp {
 
-    static void BottomUpSort(String[] args) {}
+    static void BottomUpSort(String[] args) {
+
+
+
+    }
 
 }

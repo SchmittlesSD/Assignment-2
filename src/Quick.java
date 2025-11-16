@@ -1,6 +1,10 @@
 public class Quick {
 
-    public static void QuickSort(String[] args) {}
+    public static void QuickSort(String[] args) {
+
+
+
+    }
 
 
 }
