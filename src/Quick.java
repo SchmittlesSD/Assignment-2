@@ -1,26 +1,46 @@
-public class Quick {
+class QuickSort {
 
-    public static void QuickSort(String[] args) {}
-
-
-}
-
-public static void merge(
-        int[] a, int[] l, int[] r, int left, int right) {
-
-    int i = 0, j = 0, k = 0;
-    while (i < left && j < right) {
-        if (l[i] <= r[j]) {
-            a[k++] = l[i++];
-        }
-        else {
-            a[k++] = r[j++];
+    // Quicksort function
+    static void Quicksort(int[] A, int start, int end) {
+        if (start < end) {
+            int pIndex = Partition(A, start, end);
+            Quicksort(A, start, pIndex - 1);
+            Quicksort(A, pIndex + 1, end);
         }
     }
-    while (i < left) {
-        a[k++] = l[i++];
+
+    // Partition function
+    static int Partition(int[] A, int start, int end) {
+        int pivot = A[end];
+        int i = start - 1;
+
+        for (int j = start; j <= end - 1; j++) {
+            if (A[j] < pivot) {
+                i = i + 1;
+                swap(A, i, j);
+            }
+        }
+
+        swap(A, i + 1, end);
+        return i + 1;
     }
-    while (j < right) {
-        a[k++] = r[j++];
+
+    // Swap function
+    static void swap(int[] A, int i, int j) {
+        int temp = A[i];
+        A[i] = A[j];
+        A[j] = temp;
+    }
+
+    public static void main(String[] args) {
+        int[] A = {10, 7, 8, 9, 1, 5};
+        int n = A.length;
+
+        Quicksort(A, 0, n - 1);
+
+        for (int val : A) {
+            System.out.print(val + " ");
+        }
     }
 }
+
