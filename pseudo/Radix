@@ -1,0 +1,13 @@
+A <- Integer Array
+n <- elements
+d <- digits
+
+BEGIN
+    a = integer array of size n
+    each a[j] has exactly d digits
+    a sorted in non-decreasing order
+
+    FOR i ← 1 to d
+        A ← CountingSort(a, n, digit = i)
+    RETURN A
+END
