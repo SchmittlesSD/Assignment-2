@@ -33,11 +33,8 @@ public class Radix {
             count[(arr[i] / exp) % 10]--;
         }
 
-        for (int i = 0; i < n; i++)
-            arr[i] = output[i];
-
         for (int i = 0; i < n; i++) {
-            System.out.print(arr[i] + " ");
+            arr[i] = output[i];
         }
     }
 }
