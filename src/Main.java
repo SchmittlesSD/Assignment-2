@@ -24,13 +24,14 @@ public class Main {
     // Main Sort Function
     public static void main(String[] args) {
 
+        Random random = new Random();
+
         // 5 Lists Total
         for (int count = 1; count < 51; count++) {
             int size = (count * 1000) + 1;
 
             // Elements (integers) can be 0-50000
             ArrayList<Integer> arr = new ArrayList<>();
-            Random random = new Random();
 
             for (int i = 0; i < size; i++) {
                 arr.add(random.nextInt(50000));
