@@ -21,37 +21,33 @@ public class Main {
 
             ArrayList<Long> runtime = new ArrayList<>();
 
-            // BottomUp Sort
-            int[] unsorted1 = toArray(arr);
+            /* BottomUp Sort
+            int[] bottomUpArray = toArray(arr);
             long start = System.nanoTime();
-            BottomUp.BottomUpSort(unsorted1, unsorted1.length);
+            BottomUp.BottomUpSort(bottomUpArray, bottomUpArray.length);
             long stop = System.nanoTime();
-            runtime.add(stop - start);
-            ArrayList<Integer> sorted1 = toArrayList(unsorted1);
+            runtime.add(stop - start); */
 
             // Merge Sort
-            int[] unsorted2 = toArray(arr);
-            start = System.nanoTime();
-            Merge.MergeSort(unsorted2, unsorted2.length);
-            stop = System.nanoTime();
+            int[] mergeArray = toArray(arr);
+            long start = System.nanoTime();
+            Merge.MergeSort(mergeArray, mergeArray.length);
+            long stop = System.nanoTime();
             runtime.add(stop - start);
-            ArrayList<Integer> sorted2 = toArrayList(unsorted2);
 
             // Quick Sort
-            int[] unsorted3 = toArray(arr);
+            int[] quickArray = toArray(arr);
             start = System.nanoTime();
-            Quick.QuickSort(unsorted3, 0, unsorted3.length - 1);
+            Quick.QuickSort(quickArray, 0, quickArray.length - 1);
             stop = System.nanoTime();
             runtime.add(stop - start);
-            ArrayList<Integer> sorted3 = toArrayList(unsorted3);
 
             // Radix Sort
-            int[] unsorted4 = toArray(arr);
+            int[] radixArray = toArray(arr);
             start = System.nanoTime();
-            Radix.RadixSort(unsorted4, unsorted4.length, 5);
+            Radix.RadixSort(radixArray, radixArray.length, 5);
             stop = System.nanoTime();
             runtime.add(stop - start);
-            ArrayList<Integer> sorted4 = toArrayList(unsorted4);
 
             System.out.println(runtime);
         }
@@ -74,5 +70,4 @@ public class Main {
         }
         return reverted;
     }
-
 }
