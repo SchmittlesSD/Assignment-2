@@ -24,7 +24,7 @@ public class BottomUp {
                     right = n;
                 }
 
-                Merge.merge(A, j, mid, right);
+                /* merge (A, j, mid, right); */
 
                 j = j + 2 * i;
             }

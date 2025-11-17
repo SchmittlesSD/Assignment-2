@@ -25,7 +25,7 @@ public class Merge {
     }
 
     // Merge Function
-    public static void merge(int[] A, int[] l, int[] r, int left, int right) {
+    static void merge(int[] A, int[] l, int[] r, int left, int right) {
 
         int i = 0, j = 0, k = 0;
 
@@ -44,6 +44,6 @@ public class Merge {
         while (j < right) {
             A[k++] = r[j++];
         }
-        
+
     }
 }

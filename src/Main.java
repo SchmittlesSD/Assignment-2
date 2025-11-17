@@ -25,12 +25,13 @@ public class Main {
     public static void main(String[] args) {
 
         // 5 Lists Total
-        for (int count = 1; count < 6; count++) {
-            Random random = new Random();
-            int size = random.nextInt(count * 10000) + 1;
+        for (int count = 1; count < 51; count++) {
+            int size = (count * 1000) + 1;
 
             // Elements (integers) can be 0-50000
             ArrayList<Integer> arr = new ArrayList<>();
+            Random random = new Random();
+
             for (int i = 0; i < size; i++) {
                 arr.add(random.nextInt(50000));
             }
@@ -40,7 +41,7 @@ public class Main {
             // BottomUp Sort
             int[] unsorted1 = toArray(arr);
             long start = System.nanoTime();
-            BottomUp.bottomUpSort(unsorted1, unsorted1.length);
+            BottomUp.BottomUpSort(unsorted1, unsorted1.length);
             long stop = System.nanoTime();
             runtime.add(stop - start);
             ArrayList<Integer> sorted1 = toArrayList(unsorted1);
