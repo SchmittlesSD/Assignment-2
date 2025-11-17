@@ -21,18 +21,18 @@ public class Main {
 
             ArrayList<Long> runtime = new ArrayList<>();
 
-            /* BottomUp Sort
+            // BottomUp Sort
             int[] bottomUpArray = toArray(arr);
             long start = System.nanoTime();
             BottomUp.BottomUpSort(bottomUpArray, bottomUpArray.length);
             long stop = System.nanoTime();
-            runtime.add(stop - start); */
+            runtime.add(stop - start);
 
             // Merge Sort
             int[] mergeArray = toArray(arr);
-            long start = System.nanoTime();
+            start = System.nanoTime();
             Merge.MergeSort(mergeArray, mergeArray.length);
-            long stop = System.nanoTime();
+            stop = System.nanoTime();
             runtime.add(stop - start);
 
             // Quick Sort
