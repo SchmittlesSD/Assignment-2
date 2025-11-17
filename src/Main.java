@@ -3,24 +3,6 @@ import java.util.Random;
 
 public class Main {
 
-    // Convert Array to Int
-    public static int[] toArray(ArrayList<Integer> list) {
-        int[] converted = new int[list.size()];
-        for (int i = 0; i < list.size(); i++) {
-            converted[i] = list.get(i);
-        }
-        return converted;
-    }
-
-    // Convert Int to Array
-    public static ArrayList<Integer> toArrayList(int[] converted) {
-        ArrayList<Integer> reverted = new ArrayList<>();
-        for (int val : converted) {
-            reverted.add(val);
-        }
-        return reverted;
-    }
-
     // Main Sort Function
     public static void main(String[] args) {
 
@@ -74,4 +56,23 @@ public class Main {
             System.out.println(runtime);
         }
     }
+
+    // Convert ArrayList to Array
+    public static int[] toArray(ArrayList<Integer> list) {
+        int[] converted = new int[list.size()];
+        for (int i = 0; i < list.size(); i++) {
+            converted[i] = list.get(i);
+        }
+        return converted;
+    }
+
+    // Convert Array to ArrayList
+    public static ArrayList<Integer> toArrayList(int[] converted) {
+        ArrayList<Integer> reverted = new ArrayList<>();
+        for (int val : converted) {
+            reverted.add(val);
+        }
+        return reverted;
+    }
+
 }
