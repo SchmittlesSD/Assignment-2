@@ -19,7 +19,7 @@ BEGIN
             IF right > n
                 right <- n
 
-            merge(A + j, A + mid, A + right)
+            merge(A, j, mid, right)
 
             j ← j + 2*i
         i ← i * 2

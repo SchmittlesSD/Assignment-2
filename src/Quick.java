@@ -1,11 +1,11 @@
-class QuickSort {
+public class Quick {
 
-    // Quicksort function
-    static void Quicksort(int[] A, int start, int end) {
+    // Quick Sort function
+    static void QuickSort(int[] A, int start, int end) {
         if (start < end) {
             int pIndex = Partition(A, start, end);
-            Quicksort(A, start, pIndex - 1);
-            Quicksort(A, pIndex + 1, end);
+            QuickSort(A, start, pIndex - 1);
+            QuickSort(A, pIndex + 1, end);
         }
     }
 
@@ -32,15 +32,15 @@ class QuickSort {
         A[j] = temp;
     }
 
-    public static void main(String[] args) {
+    /* public static void main(String[] args) {
         int[] A = {10, 7, 8, 9, 1, 5};
         int n = A.length;
 
-        Quicksort(A, 0, n - 1);
+        QuickSort(A, 0, n - 1);
 
         for (int val : A) {
             System.out.print(val + " ");
         }
-    }
+    } */
 }
 

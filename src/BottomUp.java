@@ -1,13 +1,9 @@
 public class BottomUp {
 
+    // Bottom Up Sort Function
     static void BottomUpSort(int[] A, int n) {
 
-        int[] A = 0;
-        int n = 0;
-        int i = 1;
-        int j = 0;
-
-        if (n > 2) {
+        if (n < 2) {
             return;
         }
 
@@ -28,12 +24,12 @@ public class BottomUp {
                     right = n;
                 }
 
-                merge(A, j, mid, right)
+                Merge.merge(A, j, mid, right);
 
-                j = j + 2 * i
+                j = j + 2 * i;
             }
 
-            i = i * 2
+            i = i * 2;
 
         }
     }

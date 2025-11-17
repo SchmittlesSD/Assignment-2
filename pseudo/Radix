@@ -1,9 +1,11 @@
 A <- Array
 n <- elements
 d <- digits
+factor <- Factor of 10 we are working with
 
 BEGIN
-    FOR i ← 1 to d
-        A ← CountingSort(a, n, digit = i)
-    RETURN A
+    factor <- 1
+    FOR i <- 1 to d
+        CountSorting(A, n, factor)
+        factor <- factor * 10
 END
