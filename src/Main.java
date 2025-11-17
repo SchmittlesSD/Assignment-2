@@ -1,3 +1,4 @@
+import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -7,6 +8,8 @@ public class Main {
     public static void main(String[] args) {
 
         Random random = new Random();
+
+        ArrayList<ArrayList<Long>> tableRuntimes = new ArrayList<>();
 
         // 5 Lists Total
         for (int count = 1; count < 51; count++) {
@@ -49,8 +52,9 @@ public class Main {
             stop = System.nanoTime();
             runtime.add(stop - start);
 
-            System.out.println(runtime);
+            tableRuntimes.add(runtime);
         }
+        print(tableRuntimes);
     }
 
     // Convert ArrayList to Array
@@ -69,5 +73,18 @@ public class Main {
             reverted.add(val);
         }
         return reverted;
+    }
+
+    // Print Table
+    public static void print(ArrayList<ArrayList<Long>> data) {
+
+        System.out.printf("%-10s %-15s %-15s %-15s %-15s%n", "Size", "BottomUp", "Merge", "Quick", "Radix");
+
+        for (int i = 0; i < data.size(); i++) {
+            int size = (i + 1) * 1000 + 1;
+            ArrayList<Long> row = data.get(i);
+
+            System.out.printf("%-10d %-15d %-15d %-15d %-15d%n", size, row.get(0), row.get(1), row.get(2), row.get(3));
+        }
     }
 }
