@@ -1,7 +1,7 @@
 public class BottomUp {
 
     // Bottom Up Sort Function
-    static void BottomUpSort(int[] A, int n) {
+    public static void BottomUpSort(int[] A, int n) {
 
         if (n < 2) {
             return;

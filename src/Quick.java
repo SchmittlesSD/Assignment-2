@@ -1,7 +1,7 @@
 public class Quick {
 
     // Quick Sort function
-    static void QuickSort(int[] A, int start, int end) {
+    public static void QuickSort(int[] A, int start, int end) {
         if (start < end) {
             int pIndex = Partition(A, start, end);
             QuickSort(A, start, pIndex - 1);
